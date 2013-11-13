@@ -1,0 +1,10 @@
+.template 1
+.output "../src/$(file.name)"
+.include "../scripts/copyright.gsl"
+.for content
+$(content.content)
+.endfor
+.endtemplate
+
+
+
