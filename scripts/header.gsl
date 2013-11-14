@@ -1,0 +1,34 @@
+.template 1
+.output "../src/$(file.name).h"
+.include "../scripts/copyright.gsl"
+
+include ../src/global.h"
+
+.for defs
+    .for def
+        .if def.public = "false"
+struct $(def.name)_t;
+typedef struct $(def.name)_t $(def.name)_t;
+        .endif
+    .endfor
+.endfor
+
+
+.for defs
+    .for def
+struct $(def.name)_t { 
+    $(def.content)
+}
+    .endfor
+.endfor
+
+.for functs
+    .for funct
+$(funct.def); 
+    .endfor
+.endfor
+
+
+
+
+.endtemplate

@@ -1,0 +1,40 @@
+<file name = "skg_vertex" >
+
+
+<explanation/>
+
+<defs>
+<def public= "true" name = "skg_vertex" content = 
+"
+
+void * needed;
+void * n_needed;
+
+
+"/> 
+
+</defs>
+
+<functs>
+
+<funct public= "true" 
+
+expl = "
+
+"
+def= "void skg_vertex_new(skg_vertex_t **skg_vertex)"
+
+content = 
+"
+*skg_vertex = malloc(sizeof(skg_vertex_t);
+
+(*skg_vertex)->needed=NULL;
+(*skg_vertex)->n_needed=NULL;
+
+"
+/>
+
+</functs>
+
+
+</file>

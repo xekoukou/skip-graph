@@ -10,9 +10,11 @@ endfor
 
 save root
 
+include "../scripts/global.gsl"
+
 for source
     for file
-        include "../scripts/template.gsl"
+        include "../scripts/header.gsl"
     endfor
 endfor
 .endtemplate

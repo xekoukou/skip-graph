@@ -1,0 +1,35 @@
+<file name = "skg_vertex" >
+
+
+<explanation/>
+
+
+<def content = 
+"
+
+struct skg_vector_t {
+
+skg_vertex_t *skg_vertex;
+unsigned char lvl;
+void *data;
+
+}
+
+"/>
+
+<impl content = 
+"
+void skg_vector_new(skg_vector_t **skg_vector){
+*skg_vector = malloc(sizeof(skg_vector_t);
+
+*(skg_vector)->lvl=0;
+}
+
+
+
+"
+/>
+
+
+</file>
+

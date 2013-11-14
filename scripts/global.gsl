@@ -1,0 +1,21 @@
+output "../src/global.h"
+for source
+    for file
+        .template 1
+struct $(file.name)_t;
+typedef struct $(file.name)_t $(file.name)_t;
+        .endtemplate
+    endfor
+
+    for file
+        for functs
+           for funct
+               if funct.public = "true"
+                   .template 1
+                   $(funct.def);
+
+                   .endtemplate
+               endif
+           endfor
+        endfor
+    endfor
