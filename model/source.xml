@@ -5,8 +5,8 @@ script = "../scripts/sourcegen.gsl"
 name="skip_graph">
 
 
-<source>
-    <file name="skip_graph.h"/>
-</source>
+    <source>
+        <file name = "skg_vertex"/>
+    </source>
 
 </project>

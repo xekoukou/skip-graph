@@ -1,21 +1,23 @@
-output "../src/global.h"
-for source
-    for file
-        .template 1
-struct $(file.name)_t;
-typedef struct $(file.name)_t $(file.name)_t;
-        .endtemplate
-    endfor
+.template 1
+.output "../src/global.h"
 
-    for file
-        for functs
-           for funct
-               if funct.public = "true"
-                   .template 1
-                   $(funct.def);
+.include "../scripts/copyright.gsl"
 
-                   .endtemplate
-               endif
-           endfor
-        endfor
-    endfor
+
+.for project.source
+.    for file
+struct $(name)_t;
+typedef struct $(name)_t $(name)_t;
+.    endfor
+
+.    for file
+.        for functs
+.           for funct
+.               if public = "true"
+$(def);
+.               endif
+.           endfor
+.        endfor
+.    endfor
+.endfor
+.endtemplate
